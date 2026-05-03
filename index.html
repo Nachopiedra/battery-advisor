@@ -68,7 +68,7 @@ header {
 .header-right { display: flex; align-items: center; gap: 1rem; }
 .status-pill {
   display: flex; align-items: center; gap: 6px;
-  font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; color: var(--text2);
+  font-family: 'Courier New', 'Lucida Console', monospace; font-size: 13px; color: var(--text2);
   background: var(--bg3); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px;
 }
 .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 2s infinite; }
@@ -82,8 +82,8 @@ nav {
 }
 .nav-btn {
   background: none; border: none; color: var(--muted);
-  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 13px;
-  letter-spacing: .15em; text-transform: uppercase;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 15px;
+  letter-spacing: .1em; text-transform: uppercase;
   padding: 14px 18px; cursor: pointer; border-bottom: 2px solid transparent;
   transition: all .2s; white-space: nowrap;
 }
@@ -112,13 +112,13 @@ main { position: relative; z-index: 5; padding: 1.5rem 2rem; max-width: 1000px; 
   background: radial-gradient(circle, rgba(245,166,35,.06) 0%, transparent 70%);
   pointer-events: none;
 }
-.rec-eyebrow { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; letter-spacing: .2em; color: var(--gold2); margin-bottom: .75rem; text-transform: uppercase; }
+.rec-eyebrow { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; letter-spacing: .2em; color: var(--gold2); margin-bottom: .75rem; text-transform: uppercase; }
 .rec-value { font-size: 5rem; font-weight: 700; line-height: 1; color: var(--gold); text-shadow: 0 0 30px rgba(245,166,35,.4); letter-spacing: -.02em; }
 .rec-value.no-cargar { font-size: 2.8rem; color: var(--green); text-shadow: 0 0 20px rgba(57,217,138,.3); }
 .rec-value.cargar-alto { color: var(--red); text-shadow: 0 0 30px rgba(255,77,77,.3); }
 .rec-unit { font-size: 1.5rem; color: var(--muted); font-weight: 400; }
-.rec-subtitle { font-size: 1.3rem; font-weight: 600; color: var(--text); letter-spacing: .05em; margin: .5rem 0; }
-.rec-detail { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--text2); line-height: 1.8; margin-top: .75rem; }
+.rec-subtitle { font-size: 1.5rem; font-weight: 600; color: var(--text); letter-spacing: .05em; margin: .5rem 0; }
+.rec-detail { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 14px; color: var(--text2); line-height: 1.8; margin-top: .75rem; }
 .conf-row { display: flex; align-items: center; gap: 8px; margin-top: 1rem; }
 .conf-bar { display: flex; gap: 3px; flex: 1; }
 .conf-seg { height: 4px; flex: 1; background: var(--bg4); border-radius: 2px; transition: background .4s; }
@@ -132,9 +132,9 @@ main { position: relative; z-index: 5; padding: 1.5rem 2rem; max-width: 1000px; 
   padding: 1rem 1.2rem; position: relative; overflow: hidden; flex: 1;
 }
 .side-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--gold); }
-.sc-label { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 9px; letter-spacing: .2em; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
-.sc-value { font-size: 1.6rem; font-weight: 700; color: var(--gold3); letter-spacing: .05em; }
-.sc-sub { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.sc-label { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; letter-spacing: .2em; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
+.sc-value { font-size: 1.9rem; font-weight: 700; color: var(--gold3); letter-spacing: .05em; }
+.sc-sub { font-size: 13px; color: var(--text2); margin-top: 2px; }
 
 /* ── SOC PANEL ── */
 .soc-panel {
@@ -142,7 +142,7 @@ main { position: relative; z-index: 5; padding: 1.5rem 2rem; max-width: 1000px; 
   padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: var(--glow);
 }
 .panel-title {
-  font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; letter-spacing: .2em;
+  font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; letter-spacing: .2em;
   color: var(--gold2); text-transform: uppercase; margin-bottom: 1.25rem;
   display: flex; align-items: center; gap: 8px;
 }
@@ -161,7 +161,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .soc-viz { position: relative; height: 12px; background: var(--bg4); border-radius: 6px; overflow: visible; margin-bottom: 6px; }
 .soc-fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--gold2), var(--gold)); box-shadow: 0 0 10px rgba(245,166,35,.4); transition: width .3s ease; }
 .soc-target-pin { position: absolute; top: -6px; width: 3px; height: 24px; background: var(--green); border-radius: 2px; box-shadow: 0 0 8px var(--green); transition: left .4s ease; }
-.soc-hint { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--muted); margin-top: 8px; letter-spacing: .08em; }
+.soc-hint { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--muted); margin-top: 8px; letter-spacing: .08em; }
 
 /* ── EV TOGGLE ── */
 .ev-row {
@@ -173,7 +173,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .ev-row:hover { border-color: var(--border2); }
 .ev-row.active { border-color: var(--cyan); background: rgba(34,211,238,.05); }
 .ev-label { font-size: 14px; font-weight: 600; }
-.ev-desc { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--muted); margin-top: 3px; }
+.ev-desc { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--muted); margin-top: 3px; }
 .toggle-sw {
   width: 44px; height: 24px; border-radius: 12px;
   background: var(--bg4); border: 1px solid var(--muted2);
@@ -194,8 +194,8 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 }
 .wx-card:hover { border-color: var(--border2); box-shadow: var(--glow); }
 .wx-icon { font-size: 1.8rem; margin-bottom: 6px; display: block; }
-.wx-val { font-size: 1.2rem; font-weight: 700; color: var(--text); letter-spacing: .05em; }
-.wx-label { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 9px; color: var(--muted); letter-spacing: .15em; text-transform: uppercase; margin-top: 4px; }
+.wx-val { font-size: 1.4rem; font-weight: 700; color: var(--text); letter-spacing: .05em; }
+.wx-label { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; color: var(--muted); letter-spacing: .15em; text-transform: uppercase; margin-top: 4px; }
 
 /* ── TARIFA CHART ── */
 .tarifa-panel {
@@ -216,7 +216,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .tarifa-hlbls { display: flex; gap: 3px; }
 .tarifa-hlbl { flex: 1; font-family: 'Courier New', 'Lucida Console', monospace; font-size: 8px; color: var(--muted); text-align: center; }
 .tarifa-legend { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 8px; }
-.tleg { display: flex; align-items: center; gap: 6px; font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--text2); }
+.tleg { display: flex; align-items: center; gap: 6px; font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--text2); }
 .tleg-sq { width: 10px; height: 10px; border-radius: 2px; }
 .tarifa-tipo-lbl { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--cyan); margin-top: 6px; letter-spacing: .1em; }
 
@@ -225,7 +225,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
   background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
   padding: 1.5rem; margin-bottom: 1.25rem; font-family: 'Courier New', 'Lucida Console', monospace;
 }
-.f-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(245,166,35,.06); font-size: 12px; }
+.f-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(245,166,35,.06); font-size: 14px; }
 .f-row:last-child { border-bottom: none; padding-top: 12px; margin-top: 4px; }
 .f-key { color: var(--text2); }
 .f-val { color: var(--text); letter-spacing: .05em; }
@@ -252,10 +252,10 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .hist-row {
   display: grid; grid-template-columns: 90px 1fr 90px 90px 100px;
   gap: .75rem; padding: 10px 0; border-bottom: 1px solid rgba(245,166,35,.06);
-  font-size: 13px; align-items: center;
+  font-size: 15px; align-items: center;
 }
 .hist-row:last-child { border-bottom: none; }
-.h-date { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--muted); }
+.h-date { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--muted); }
 .h-rec { font-weight: 600; letter-spacing: .05em; }
 .h-kwh { font-family: 'Courier New', 'Lucida Console', monospace; color: var(--gold); }
 .h-soc { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; color: var(--text2); }
@@ -270,7 +270,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .fb-btn.bad { background: rgba(255,77,77,.1); border-color: var(--red); color: var(--red); }
 .acc-panel { margin-bottom: 1.25rem; }
 .acc-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.acc-label { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--text2); min-width: 140px; }
+.acc-label { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--text2); min-width: 140px; }
 .acc-bar { flex: 1; height: 6px; background: var(--bg4); border-radius: 3px; overflow: hidden; }
 .acc-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold2), var(--green)); transition: width .8s ease; }
 .acc-pct { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; color: var(--gold); min-width: 40px; text-align: right; }
@@ -291,11 +291,11 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .savings-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 1.25rem; }
 .sav-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
 .sav-lbl { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 9px; color: var(--muted); letter-spacing: .15em; text-transform: uppercase; margin-bottom: 4px; }
-.sav-val { font-size: 1.8rem; font-weight: 700; color: var(--gold3); }
-.sav-sub { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.sav-val { font-size: 2.1rem; font-weight: 700; color: var(--gold3); }
+.sav-sub { font-size: 13px; color: var(--text2); margin-top: 2px; }
 .monthly-chart { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
 .month-bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.month-lbl { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--text2); min-width: 28px; }
+.month-lbl { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--text2); min-width: 28px; }
 .month-bar-bg { flex: 1; height: 10px; background: var(--bg4); border-radius: 5px; overflow: hidden; }
 .month-bar-fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--gold2), var(--green)); transition: width .8s ease; }
 .month-val { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--green); min-width: 48px; text-align: right; }
@@ -312,7 +312,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .s-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(245,166,35,.05); }
 .s-row:last-child { border-bottom: none; }
 .s-name { font-weight: 600; font-size: 14px; }
-.s-desc { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--muted); margin-top: 2px; }
+.s-desc { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--muted); margin-top: 2px; }
 .s-input {
   background: var(--bg3); border: 1px solid var(--border2); border-radius: 6px;
   color: var(--gold); font-family: 'Courier New', 'Lucida Console', monospace; font-size: 13px;
@@ -330,7 +330,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 /* ── BUTTONS ── */
 .btn {
   background: none; border: 1px solid var(--border2); color: var(--text2);
-  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 13px;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 15px;
   letter-spacing: .1em; text-transform: uppercase; padding: 8px 20px;
   border-radius: 6px; cursor: pointer; transition: all .2s;
 }
@@ -341,7 +341,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1rem; }
 
 /* ── ALERT ── */
-.alert { border-radius: 8px; padding: 12px 16px; margin-bottom: 1rem; font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; line-height: 1.7; letter-spacing: .05em; border-left: 3px solid; }
+.alert { border-radius: 8px; padding: 12px 16px; margin-bottom: 1rem; font-family: 'Courier New', 'Lucida Console', monospace; font-size: 13px; line-height: 1.7; letter-spacing: .05em; border-left: 3px solid; }
 .alert-gold { background: rgba(245,166,35,.06); border-color: var(--gold2); color: var(--gold3); }
 .alert-green { background: rgba(57,217,138,.06); border-color: var(--green); color: #6ee7b7; }
 .alert-cyan { background: rgba(34,211,238,.06); border-color: var(--cyan); color: var(--cyan); }
@@ -933,48 +933,73 @@ async function fetchWx(lat, lon) {
 // MOTOR DE CÁLCULO
 // ══════════════════════════════════════════════════════
 function calcRec(soc, wx, cfg, withEV) {
-  const m = new Date().getMonth() + 2 > 12 ? 1 : new Date().getMonth() + 2;
+  const now = new Date();
+  const tmr = new Date(now); tmr.setDate(tmr.getDate() + 1);
+  const tmrFree = isFreeDay(tmr);   // ← ¿mañana es finde/festivo? Toda la tarifa es valle
+  const todayFree = isFreeDay(now); // ← ¿hoy también es libre?
+
+  const m = now.getMonth() + 2 > 12 ? 1 : now.getMonth() + 2;
   const tf = wx ? H.tempF(wx.tempMin) : 1.0;
   const cf = wx ? H.cloudF(wx.cloudMorn) : 0.8;
 
-  // Aplicar factores aprendidos del historial
   const consFactor = LEARNED.consFactor || 1.0;
-  const solFactor = LEARNED.solFactor || 1.0;
+  const solFactor  = LEARNED.solFactor  || 1.0;
 
   const demBase = (H.cons[m] || 5) * tf * cfg.sens * consFactor;
   const evExtra = withEV ? (cfg.evKwh || 10) : 0;
-  const dem = demBase + evExtra;
-  const sol = (H.sol[m] || 3) * cf * solFactor;
-  const startH = H.start[m] || 10;
+  const dem     = demBase + evExtra;
+  const sol     = (H.sol[m] || 3) * cf * solFactor;
+  const startH  = H.start[m] || 10;
   const batUtil = Math.max(0, (soc - cfg.socMin) / 100 * cfg.cap);
-  const raw = dem + cfg.res - sol - batUtil;
-  const kWh = Math.max(0, Math.round(raw * 10) / 10);
-  const horas = kWh > 0 ? Math.round(kWh / cfg.kw * 10) / 10 : 0;
-  const socObj = Math.min(100, Math.round(soc + (kWh / cfg.cap * 100)));
-  const saving = kWh > 0 ? Math.round(kWh * (TARIFA.punta - TARIFA.valle) * 100) / 100 : 0;
+  const raw     = dem + cfg.res - sol - batUtil;
+  const kWh     = Math.max(0, Math.round(raw * 10) / 10);
+  const horas   = kWh > 0 ? Math.round(kWh / cfg.kw * 10) / 10 : 0;
+  const socObj  = Math.min(100, Math.round(soc + (kWh / cfg.cap * 100)));
+  const saving  = kWh > 0 ? Math.round(kWh * (TARIFA.punta - TARIFA.valle) * 100) / 100 : 0;
   const costeCarga = kWh > 0 ? Math.round(kWh * TARIFA.valle * 100) / 100 : 0;
 
-  let conf = wx ? (wx.rainProb > 40 || wx.cloudMorn > 60 ? 'MEDIA' : 'ALTA') : 'BAJA';
+  let conf  = wx ? (wx.rainProb > 40 || wx.cloudMorn > 60 ? 'MEDIA' : 'ALTA') : 'BAJA';
   let level = kWh === 0 ? 0 : kWh <= 3 ? 1 : kWh <= 6 ? 2 : kWh <= 9 ? 3 : 4;
-  const titles = ['No cargar esta noche','Carga ligera','Carga media','Carga alta','Carga completa'];
 
-  let reasons = [];
-  if (wx) {
-    if (wx.tempMin < 5) reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia toda la noche`);
-    else if (wx.tempMin < 12) reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia activa`);
-    else reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia mínima`);
-    if (wx.cloudMorn > 60) reasons.push(`nubosidad ${Math.round(wx.cloudMorn)}% mañana`);
-    else reasons.push(`cielo despejado → buena solar`);
+  // Títulos y lógica especial para días libres
+  let title, reasons = [];
+
+  if (kWh === 0) {
+    title = 'No es necesario cargar';
+  } else if (tmrFree) {
+    // Mañana todo el día es valle — no hay urgencia de cargar de madrugada
+    title = 'Cargar mañana · tarifa valle todo el día';
+    reasons.push('📅 mañana es ' + (tmr.getDay()===0?'domingo':tmr.getDay()===6?'sábado':'festivo') + ' → tarifa valle las 24h');
+    reasons.push('puedes cargar en cualquier momento del día, no solo de madrugada');
+  } else if (todayFree) {
+    title = ['No cargar','Carga ligera esta tarde','Carga media esta tarde','Carga alta esta tarde','Carga completa esta tarde'][level];
+    reasons.push('📅 hoy es día libre → tarifa valle todo el día, carga cuando quieras');
+  } else {
+    title = ['No cargar esta noche','Carga ligera esta noche','Carga media esta noche','Carga alta esta noche','Carga completa esta noche'][level];
   }
-  if (withEV) reasons.push('coche en carga esta noche (+' + cfg.evKwh + ' kWh)');
+
+  if (wx) {
+    if (wx.tempMin < 5)       reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia toda la noche`);
+    else if (wx.tempMin < 12) reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia activa`);
+    else                      reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia mínima`);
+    if (wx.cloudMorn > 60) reasons.push(`nubosidad ${Math.round(wx.cloudMorn)}% mañana`);
+    else                   reasons.push(`cielo despejado → buena solar`);
+  }
+  if (withEV)  reasons.push('coche en carga esta noche (+' + cfg.evKwh + ' kWh)');
   if (soc < 30) reasons.push(`SOC bajo (${soc}%)`);
   else if (soc > 75) reasons.push(`baterías bien cargadas (${soc}%)`);
 
-  // Ventana óptima
-  const window = getOptimalWindow(kWh, cfg);
+  // Ventana óptima — si mañana es libre, ampliar a todo el día
+  let window;
+  if (tmrFree && kWh > 0) {
+    const horasNec = Math.ceil(kWh / cfg.kw);
+    window = { horas: [], label: 'cualquier hora mañana · 0,072€', precioMedio: TARIFA.valle };
+  } else {
+    window = getOptimalWindow(kWh, cfg);
+  }
 
-  return { kWh, horas, socObj, conf, level, title: titles[level], reason: reasons.join(' · '),
-           dem, demBase, evExtra, sol, batUtil, saving, costeCarga, startH, tf, cf, m, window };
+  return { kWh, horas, socObj, conf, level, title, reason: reasons.join(' · '),
+           dem, demBase, evExtra, sol, batUtil, saving, costeCarga, startH, tf, cf, m, window, tmrFree, todayFree };
 }
 
 // ══════════════════════════════════════════════════════
