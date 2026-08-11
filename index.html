@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Casa Las Peñas · Battery Advisor</title>
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('clp3_theme')||'dark');</script>
+<title>SIGED · Sistema Inteligente de Gestión Energética Doméstica</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
 <!-- fonts: sistema -->
@@ -32,7 +33,29 @@
   --border2: rgba(245,166,35,0.3);
   --glow: 0 0 20px rgba(245,166,35,0.15);
   --glow2: 0 0 40px rgba(245,166,35,0.25);
+  --surface: rgba(8,11,15,0.85);
 }
+
+:root[data-theme="light"] {
+  --bg: #ffffff;  --bg2: #f7f8fa;  --bg3: #eef1f5;  --bg4: #e4e8ee;
+  --gold: #d98a00; --gold2: #b8730a; --gold3: #a86a00; --amber: #d97400;
+  --green: #12a05e; --red: #d92d2d; --blue: #2c7fd6; --cyan: #0e97b0;
+  --muted: #718096; --muted2: #cbd5e0;
+  --text: #1a2232; --text2: #4a5568;
+  --border: rgba(31,56,100,0.15); --border2: rgba(31,56,100,0.30);
+  --glow: 0 1px 3px rgba(0,0,0,0.08); --glow2: 0 2px 8px rgba(0,0,0,0.10);
+  --surface: rgba(255,255,255,0.9);
+}
+
+.theme-btn {
+  background: var(--bg3); color: var(--text2);
+  border: 1px solid var(--border2); border-radius: 8px;
+  width: 34px; height: 34px; cursor: pointer; font-size: 15px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s, color .2s;
+}
+.theme-btn:hover { color: var(--gold); border-color: var(--gold); }
+.header-right { display: flex; align-items: center; gap: 10px; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   background: var(--bg);
@@ -57,7 +80,7 @@ header {
   padding: 0 2rem; height: 64px;
   display: flex; align-items: center; justify-content: space-between;
   border-bottom: 1px solid var(--border);
-  background: rgba(8,11,15,0.95);
+  background: var(--surface);
   backdrop-filter: blur(10px);
 }
 .logo-area { display: flex; align-items: center; gap: 12px; }
@@ -78,7 +101,7 @@ header {
 nav {
   position: relative; z-index: 10;
   display: flex; border-bottom: 1px solid var(--border);
-  background: rgba(8,11,15,0.8); padding: 0 2rem; overflow-x: auto;
+  background: var(--surface); padding: 0 2rem; overflow-x: auto;
 }
 .nav-btn {
   background: none; border: none; color: var(--muted);
@@ -418,11 +441,12 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
       </svg>
     </div>
     <div>
-      <div class="logo-title">Casa Las Peñas</div>
-      <div class="logo-sub">Battery Charge Advisor · v3.0</div>
+      <div class="logo-title">SIGED</div>
+      <div class="logo-sub">Sistema Inteligente de Gestión Energética Doméstica · v3.0</div>
     </div>
   </div>
   <div class="header-right">
+    <button id="theme-btn" class="theme-btn" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">☀️</button>
     <div class="status-pill">
       <span class="pulse" id="pulse-dot"></span>
       <span id="status-text">–</span>
@@ -1371,7 +1395,7 @@ async function enviarTelegram() {
   const libre = isFreeDay(tmr);
   const tarifaTipo = libre ? '📗 VALLE todo el día (festivo/finde)' : '📊 Tarifa diferenciada';
 
-  const msg = `⚡ <b>Casa Las Peñas · Gestión Baterías</b>
+  const msg = `⚡ <b>SIGED · Gestión de baterías</b>
 ${now.toLocaleDateString('es-ES', {weekday:'long', day:'numeric', month:'long'})}
 
 <b>${rec.title.toUpperCase()}</b>
@@ -1397,7 +1421,7 @@ async function testTelegram() {
   const status = document.getElementById('tg-status');
   status.style.color = 'var(--muted)';
   status.textContent = 'Enviando...';
-  const ok = await sendTgMessage('✅ <b>Casa Las Peñas</b> · Test de conexión correcto. Telegram configurado.', cfg);
+  const ok = await sendTgMessage('✅ <b>SIGED</b> · Test de conexión correcto. Telegram configurado.', cfg);
   status.style.color = ok ? 'var(--green)' : 'var(--red)';
   status.textContent = ok ? '✓ Enviado correctamente' : '✗ Error – verifica token y chat ID';
 }
@@ -1421,10 +1445,22 @@ function detectLoc() {
   });
 }
 
+function applyTheme(t) {
+  document.documentElement.setAttribute('data-theme', t);
+  localStorage.setItem('clp3_theme', t);
+  const b = document.getElementById('theme-btn');
+  if (b) b.textContent = (t === 'light') ? '🌙' : '☀️';
+}
+function toggleTheme() {
+  const cur = document.documentElement.getAttribute('data-theme');
+  applyTheme(cur === 'light' ? 'dark' : 'light');
+}
+
 // ══════════════════════════════════════════════════════
 // INIT
 // ══════════════════════════════════════════════════════
 window.addEventListener('load', () => {
+  applyTheme(localStorage.getItem('clp3_theme') || 'dark');
   loadCfg();
   renderEV();
   const savedSoc = localStorage.getItem('clp3_soc') || '50';
