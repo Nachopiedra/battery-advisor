@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('clp3_theme')||'dark');</script>
-<title>SIGED · Sistema Inteligente de Gestión Energética Doméstica</title>
+<title>SIGED Â· Sistema Inteligente de GestiÃ³n EnergÃ©tica DomÃ©stica</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
 <!-- fonts: sistema -->
@@ -74,7 +75,7 @@ body::before {
   pointer-events: none; z-index: 0;
 }
 
-/* ── HEADER ── */
+/* â”€â”€ HEADER â”€â”€ */
 header {
   position: relative; z-index: 10;
   padding: 0 2rem; height: 64px;
@@ -97,7 +98,7 @@ header {
 .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 
-/* ── NAV ── */
+/* â”€â”€ NAV â”€â”€ */
 nav {
   position: relative; z-index: 10;
   display: flex; border-bottom: 1px solid var(--border);
@@ -113,13 +114,13 @@ nav {
 .nav-btn:hover { color: var(--gold3); }
 .nav-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
 
-/* ── MAIN ── */
+/* â”€â”€ MAIN â”€â”€ */
 main { position: relative; z-index: 5; padding: 1.5rem 2rem; max-width: 1000px; }
 .screen { display: none; }
 .screen.active { display: block; animation: fadeUp .3s ease; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 
-/* ── HERO ── */
+/* â”€â”€ HERO â”€â”€ */
 .hero { display: grid; grid-template-columns: 1fr 280px; gap: 1.5rem; margin-bottom: 1.25rem; }
 .hero-main {
   background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
@@ -148,7 +149,7 @@ main { position: relative; z-index: 5; padding: 1.5rem 2rem; max-width: 1000px; 
 .conf-seg.on { background: var(--gold); box-shadow: 0 0 6px rgba(245,166,35,.5); }
 .conf-text { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--gold2); letter-spacing: .1em; }
 
-/* ── SIDE ── */
+/* â”€â”€ SIDE â”€â”€ */
 .hero-side { display: flex; flex-direction: column; gap: 10px; }
 .side-card {
   background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
@@ -159,7 +160,7 @@ main { position: relative; z-index: 5; padding: 1.5rem 2rem; max-width: 1000px; 
 .sc-value { font-size: 1.9rem; font-weight: 700; color: var(--gold3); letter-spacing: .05em; }
 .sc-sub { font-size: 13px; color: var(--text2); margin-top: 2px; }
 
-/* ── SOC PANEL ── */
+/* â”€â”€ SOC PANEL â”€â”€ */
 .soc-panel {
   background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
   padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: var(--glow);
@@ -186,7 +187,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .soc-target-pin { position: absolute; top: -6px; width: 3px; height: 24px; background: var(--green); border-radius: 2px; box-shadow: 0 0 8px var(--green); transition: left .4s ease; }
 .soc-hint { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 12px; color: var(--muted); margin-top: 8px; letter-spacing: .08em; }
 
-/* ── EV TOGGLE ── */
+/* â”€â”€ EV TOGGLE â”€â”€ */
 .ev-row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 12px 16px; margin-bottom: 1rem;
@@ -209,7 +210,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 }
 .toggle-sw.on::after { transform: translateX(20px); }
 
-/* ── WEATHER ── */
+/* â”€â”€ WEATHER â”€â”€ */
 .weather-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 1.25rem; }
 .wx-card {
   background: var(--bg2); border: 1px solid var(--border); border-radius: 10px;
@@ -220,7 +221,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .wx-val { font-size: 1.4rem; font-weight: 700; color: var(--text); letter-spacing: .05em; }
 .wx-label { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; color: var(--muted); letter-spacing: .15em; text-transform: uppercase; margin-top: 4px; }
 
-/* ── TARIFA CHART ── */
+/* â”€â”€ TARIFA CHART â”€â”€ */
 .tarifa-panel {
   background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
   padding: 1.5rem; margin-bottom: 1.25rem;
@@ -243,7 +244,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .tleg-sq { width: 10px; height: 10px; border-radius: 2px; }
 .tarifa-tipo-lbl { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--cyan); margin-top: 6px; letter-spacing: .1em; }
 
-/* ── FORMULA ── */
+/* â”€â”€ FORMULA â”€â”€ */
 .formula-panel {
   background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
   padding: 1.5rem; margin-bottom: 1.25rem; font-family: 'Courier New', 'Lucida Console', monospace;
@@ -254,7 +255,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .f-val { color: var(--text); letter-spacing: .05em; }
 .f-result { color: var(--gold); font-size: 1.1rem; font-weight: 600; letter-spacing: .1em; }
 
-/* ── CHART ── */
+/* â”€â”€ CHART â”€â”€ */
 .chart-panel { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; }
 .chart-legend { display: flex; gap: 1.5rem; margin-bottom: 1rem; font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--text2); letter-spacing: .1em; flex-wrap: wrap; }
 .leg { display: flex; align-items: center; gap: 6px; }
@@ -265,7 +266,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .ch-bar { flex: 1; border-radius: 2px 2px 0 0; min-height: 2px; transition: height .5s ease; }
 .ch-lbl { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 8px; color: var(--muted); }
 
-/* ── HISTORIAL ── */
+/* â”€â”€ HISTORIAL â”€â”€ */
 .hist-header {
   display: grid; grid-template-columns: 90px 1fr 90px 90px 100px;
   gap: .75rem; padding: 8px 0; border-bottom: 1px solid var(--border2);
@@ -298,7 +299,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .acc-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--gold2), var(--green)); transition: width .8s ease; }
 .acc-pct { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 11px; color: var(--gold); min-width: 40px; text-align: right; }
 
-/* ── AHORRO ── */
+/* â”€â”€ AHORRO â”€â”€ */
 .savings-hero {
   background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
   padding: 2rem; text-align: center; margin-bottom: 1.25rem; box-shadow: var(--glow);
@@ -323,7 +324,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .month-bar-fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--gold2), var(--green)); transition: width .8s ease; }
 .month-val { font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; color: var(--green); min-width: 48px; text-align: right; }
 
-/* ── SETTINGS ── */
+/* â”€â”€ SETTINGS â”€â”€ */
 .settings-block { margin-bottom: 2rem; }
 .settings-head {
   font-family: 'Courier New', 'Lucida Console', monospace; font-size: 10px; letter-spacing: .2em;
@@ -331,7 +332,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
   padding-bottom: 8px; border-bottom: 1px solid var(--border);
   display: flex; align-items: center; gap: 8px;
 }
-.settings-head::before { content: '▸'; }
+.settings-head::before { content: 'â–¸'; }
 .s-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(245,166,35,.05); }
 .s-row:last-child { border-bottom: none; }
 .s-name { font-weight: 600; font-size: 14px; }
@@ -350,7 +351,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 }
 .tg-info strong { color: var(--cyan); }
 
-/* ── BUTTONS ── */
+/* â”€â”€ BUTTONS â”€â”€ */
 .btn {
   background: none; border: 1px solid var(--border2); color: var(--text2);
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 15px;
@@ -363,13 +364,13 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 .btn-cyan { background: rgba(34,211,238,.1); border-color: var(--cyan); color: var(--cyan); }
 .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1rem; }
 
-/* ── ALERT ── */
+/* â”€â”€ ALERT â”€â”€ */
 .alert { border-radius: 8px; padding: 12px 16px; margin-bottom: 1rem; font-family: 'Courier New', 'Lucida Console', monospace; font-size: 13px; line-height: 1.7; letter-spacing: .05em; border-left: 3px solid; }
 .alert-gold { background: rgba(245,166,35,.06); border-color: var(--gold2); color: var(--gold3); }
 .alert-green { background: rgba(57,217,138,.06); border-color: var(--green); color: #6ee7b7; }
 .alert-cyan { background: rgba(34,211,238,.06); border-color: var(--cyan); color: var(--cyan); }
 
-/* ── LOADING ── */
+/* â”€â”€ LOADING â”€â”€ */
 #loading {
   position: fixed; inset: 0; background: var(--bg);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -416,7 +417,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
     <circle cx="40" cy="40" r="18" fill="url(#lg)"/>
   </svg>
   <div class="load-bar"><div class="load-fill"></div></div>
-  <div class="load-text" id="load-msg">Calculando recomendación</div>
+  <div class="load-text" id="load-msg">Calculando recomendaciÃ³n</div>
 </div>
 
 <!-- HEADER -->
@@ -442,21 +443,21 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
     </div>
     <div>
       <div class="logo-title">SIGED</div>
-      <div class="logo-sub">Sistema Inteligente de Gestión Energética Doméstica · v3.0</div>
+      <div class="logo-sub">Sistema Inteligente de GestiÃ³n EnergÃ©tica DomÃ©stica Â· v3.0</div>
     </div>
   </div>
   <div class="header-right">
-    <button id="theme-btn" class="theme-btn" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">☀️</button>
+    <button id="theme-btn" class="theme-btn" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">â˜€ï¸</button>
     <div class="status-pill">
       <span class="pulse" id="pulse-dot"></span>
-      <span id="status-text">–</span>
+      <span id="status-text">â€“</span>
     </div>
   </div>
 </header>
 
 <!-- NAV -->
 <nav>
-  <button class="nav-btn active" onclick="showTab('rec',this)">Recomendación</button>
+  <button class="nav-btn active" onclick="showTab('rec',this)">RecomendaciÃ³n</button>
   <button class="nav-btn" onclick="showTab('det',this)">Detalle</button>
   <button class="nav-btn" onclick="showTab('hist',this)">Historial</button>
   <button class="nav-btn" onclick="showTab('ahorro',this)">Ahorro</button>
@@ -465,37 +466,37 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 
 <main>
 
-<!-- ══ RECOMENDACIÓN ══ -->
+<!-- â•â• RECOMENDACIÃ“N â•â• -->
 <div id="rec" class="screen active">
   <div class="hero">
     <div class="hero-main">
-      <div class="rec-eyebrow">▸ Recomendación para esta noche</div>
-      <div class="rec-value" id="rec-val">–</div>
+      <div class="rec-eyebrow">â–¸ RecomendaciÃ³n para esta noche</div>
+      <div class="rec-value" id="rec-val">â€“</div>
       <div class="rec-subtitle" id="rec-sub">Calculando...</div>
-      <div class="rec-detail" id="rec-detail">Obteniendo datos meteorológicos...</div>
+      <div class="rec-detail" id="rec-detail">Obteniendo datos meteorolÃ³gicos...</div>
       <div class="conf-row">
         <div class="conf-bar">
           <div class="conf-seg" id="cs1"></div>
           <div class="conf-seg" id="cs2"></div>
           <div class="conf-seg" id="cs3"></div>
         </div>
-        <div class="conf-text" id="conf-txt">– CONFIANZA</div>
+        <div class="conf-text" id="conf-txt">â€“ CONFIANZA</div>
       </div>
     </div>
     <div class="hero-side">
       <div class="side-card">
-        <div class="sc-label">Ventana óptima de carga</div>
-        <div class="sc-value" id="sc-ventana">–</div>
+        <div class="sc-label">Ventana Ã³ptima de carga</div>
+        <div class="sc-value" id="sc-ventana">â€“</div>
         <div class="sc-sub" id="sc-ventana-sub">tarifa valle</div>
       </div>
       <div class="side-card">
         <div class="sc-label">SOC objetivo amanecer</div>
-        <div class="sc-value" id="sc-soc-obj">–%</div>
-        <div class="sc-sub">estado batería al alba</div>
+        <div class="sc-value" id="sc-soc-obj">â€“%</div>
+        <div class="sc-sub">estado baterÃ­a al alba</div>
       </div>
       <div class="side-card">
         <div class="sc-label">Ahorro estimado</div>
-        <div class="sc-value" id="sc-ahorro">–€</div>
+        <div class="sc-value" id="sc-ahorro">â€“â‚¬</div>
         <div class="sc-sub">vs compra en punta</div>
       </div>
     </div>
@@ -503,30 +504,30 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 
   <!-- WEATHER -->
   <div class="weather-grid">
-    <div class="wx-card"><span class="wx-icon" id="wx-ico">–</span><div class="wx-val" id="wx-sky">–</div><div class="wx-label">Cielo mañana</div></div>
-    <div class="wx-card"><span class="wx-icon">🌡</span><div class="wx-val" id="wx-temp">–°C</div><div class="wx-label">Mín. nocturna</div></div>
-    <div class="wx-card"><span class="wx-icon">⚡</span><div class="wx-val" id="wx-start">–h</div><div class="wx-label">Arranque solar</div></div>
-    <div class="wx-card"><span class="wx-icon">💧</span><div class="wx-val" id="wx-rain">–%</div><div class="wx-label">Prob. lluvia</div></div>
+    <div class="wx-card"><span class="wx-icon" id="wx-ico">â€“</span><div class="wx-val" id="wx-sky">â€“</div><div class="wx-label">Cielo maÃ±ana</div></div>
+    <div class="wx-card"><span class="wx-icon">ðŸŒ¡</span><div class="wx-val" id="wx-temp">â€“Â°C</div><div class="wx-label">MÃ­n. nocturna</div></div>
+    <div class="wx-card"><span class="wx-icon">âš¡</span><div class="wx-val" id="wx-start">â€“h</div><div class="wx-label">Arranque solar</div></div>
+    <div class="wx-card"><span class="wx-icon">ðŸ’§</span><div class="wx-val" id="wx-rain">â€“%</div><div class="wx-label">Prob. lluvia</div></div>
   </div>
 
-  <!-- TARIFA + VENTANA ÓPTIMA -->
+  <!-- TARIFA + VENTANA Ã“PTIMA -->
   <div class="tarifa-panel">
-    <div class="panel-title">Tarifa Naturgy Noche · Ventana óptima de carga</div>
+    <div class="panel-title">Tarifa Naturgy Noche Â· Ventana Ã³ptima de carga</div>
     <div id="tarifa-tipo-info" class="tarifa-tipo-lbl"></div>
     <div class="tarifa-bars" id="tarifa-bars"></div>
     <div class="tarifa-hlbls" id="tarifa-hlbls"></div>
     <div class="tarifa-legend">
-      <div class="tleg"><div class="tleg-sq" style="background:rgba(57,217,138,.5)"></div>Valle 0,072€ (00–08h)</div>
-      <div class="tleg"><div class="tleg-sq" style="background:rgba(245,166,35,.5)"></div>Llano 0,107€</div>
-      <div class="tleg"><div class="tleg-sq" style="background:rgba(255,77,77,.5)"></div>Punta 0,180€</div>
-      <div class="tleg"><div class="tleg-sq" style="background:var(--cyan)"></div>Cargar aquí ←</div>
+      <div class="tleg"><div class="tleg-sq" style="background:rgba(57,217,138,.5)"></div>Valle 0,072â‚¬ (00â€“08h)</div>
+      <div class="tleg"><div class="tleg-sq" style="background:rgba(245,166,35,.5)"></div>Llano 0,107â‚¬</div>
+      <div class="tleg"><div class="tleg-sq" style="background:rgba(255,77,77,.5)"></div>Punta 0,180â‚¬</div>
+      <div class="tleg"><div class="tleg-sq" style="background:var(--cyan)"></div>Cargar aquÃ­ â†</div>
       <div class="tleg"><div class="tleg-sq" style="background:rgba(74,85,104,.3)"></div>Fiesta/fin de semana</div>
     </div>
   </div>
 
   <!-- SOC INPUT -->
   <div class="soc-panel">
-    <div class="panel-title">Estado actual de baterías · 4 × 4,8 kWh = 19,2 kWh total</div>
+    <div class="panel-title">Estado actual de baterÃ­as Â· 4 Ã— 4,8 kWh = 19,2 kWh total</div>
     <div class="soc-input-row">
       <div class="soc-label-col">SOC actual</div>
       <input type="range" id="soc-slider" min="0" max="100" value="50" step="1" style="--pct:50%" oninput="onSoc(this.value)">
@@ -538,15 +539,15 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
       <div class="soc-target-pin" id="soc-pin" style="left:70%"></div>
     </div>
     <div style="display:flex;justify-content:space-between;font-family:'Courier New','Lucida Console',monospace;font-size:10px;color:var(--muted);margin-top:4px;">
-      <span>0%</span><span style="color:var(--green)" id="soc-obj-lbl">objetivo: –%</span><span>100%</span>
+      <span>0%</span><span style="color:var(--green)" id="soc-obj-lbl">objetivo: â€“%</span><span>100%</span>
     </div>
-    <div class="soc-hint">← mira el SOC en la app Greenheiss, mueve el slider, pulsa Recalcular</div>
+    <div class="soc-hint">â† mira el SOC en la app Greenheiss, mueve el slider, pulsa Recalcular</div>
 
     <!-- EV TOGGLE -->
     <div class="ev-row" id="ev-row" onclick="toggleEV()" style="margin-top:1rem">
       <div>
-        <div class="ev-label">🚗 Cargo el coche esta noche</div>
-        <div class="ev-desc">+10 kWh de demanda si carga en valle (00–08h) · desactiva si llega tarde o carga rápida de día</div>
+        <div class="ev-label">ðŸš— Cargo el coche esta noche</div>
+        <div class="ev-desc">+10 kWh de demanda si carga en valle (00â€“08h) Â· desactiva si llega tarde o carga rÃ¡pida de dÃ­a</div>
       </div>
       <div class="toggle-sw" id="ev-toggle"></div>
     </div>
@@ -554,26 +555,26 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
 
   <!-- FORMULA -->
   <div class="formula-panel">
-    <div class="panel-title" style="margin-bottom:.75rem">Cálculo detallado</div>
-    <div class="f-row"><span class="f-key">consumo previsto 08h → arranque solar</span><span class="f-val" id="f-cons">–</span></div>
-    <div class="f-row"><span class="f-key">+ coche eléctrico esta noche</span><span class="f-val" id="f-ev">–</span></div>
-    <div class="f-row"><span class="f-key">solar esperada en ese tramo</span><span class="f-val" id="f-sol">–</span></div>
-    <div class="f-row"><span class="f-key">energía batería disponible (sobre 20%)</span><span class="f-val" id="f-bat">–</span></div>
-    <div class="f-row"><span class="f-key">reserva mínima de seguridad</span><span class="f-val" id="f-res">1,5 kWh</span></div>
-    <div class="f-row"><span class="f-key" style="color:var(--gold2)">▸ carga recomendada</span><span class="f-result" id="f-rec">– kWh</span></div>
+    <div class="panel-title" style="margin-bottom:.75rem">CÃ¡lculo detallado</div>
+    <div class="f-row"><span class="f-key">consumo previsto 08h â†’ arranque solar</span><span class="f-val" id="f-cons">â€“</span></div>
+    <div class="f-row"><span class="f-key">+ coche elÃ©ctrico esta noche</span><span class="f-val" id="f-ev">â€“</span></div>
+    <div class="f-row"><span class="f-key">solar esperada en ese tramo</span><span class="f-val" id="f-sol">â€“</span></div>
+    <div class="f-row"><span class="f-key">energÃ­a baterÃ­a disponible (sobre 20%)</span><span class="f-val" id="f-bat">â€“</span></div>
+    <div class="f-row"><span class="f-key">reserva mÃ­nima de seguridad</span><span class="f-val" id="f-res">1,5 kWh</span></div>
+    <div class="f-row"><span class="f-key" style="color:var(--gold2)">â–¸ carga recomendada</span><span class="f-result" id="f-rec">â€“ kWh</span></div>
   </div>
 
   <div class="btn-row">
-    <button class="btn btn-gold" onclick="calcular()">↺ Recalcular</button>
-    <button class="btn btn-cyan" id="btn-save-hist" onclick="guardarEnHistorial()">💾 Guardar en historial</button>
-    <button class="btn" onclick="enviarTelegram()">📨 Enviar a Telegram</button>
+    <button class="btn btn-gold" onclick="calcular()">â†º Recalcular</button>
+    <button class="btn btn-cyan" id="btn-save-hist" onclick="guardarEnHistorial()">ðŸ’¾ Guardar en historial</button>
+    <button class="btn" onclick="enviarTelegram()">ðŸ“¨ Enviar a Telegram</button>
   </div>
 </div>
 
-<!-- ══ DETALLE ══ -->
+<!-- â•â• DETALLE â•â• -->
 <div id="det" class="screen">
   <div class="chart-panel">
-    <div class="panel-title">Previsión horaria mañana</div>
+    <div class="panel-title">PrevisiÃ³n horaria maÃ±ana</div>
     <div class="chart-legend">
       <div class="leg"><div class="leg-sq" style="background:#ff6b6b"></div>Consumo</div>
       <div class="leg"><div class="leg-sq" style="background:#f5a623"></div>Solar</div>
@@ -583,35 +584,35 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
     <div style="display:flex;gap:4px;margin-top:6px" id="hour-lbls"></div>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:1.25rem">
-    <div class="side-card" style="flex:unset"><div class="sc-label">Demanda hasta solar</div><div class="sc-value" id="d-dem">–</div><div class="sc-sub">kWh previstos</div></div>
-    <div class="side-card" style="flex:unset"><div class="sc-label">Solar 08h–arranque</div><div class="sc-value" id="d-sol">–</div><div class="sc-sub">kWh esperados</div></div>
-    <div class="side-card" style="flex:unset"><div class="sc-label">Hora arranque solar</div><div class="sc-value" id="d-start">–</div><div class="sc-sub">media mensual</div></div>
-    <div class="side-card" style="flex:unset"><div class="sc-label">Factor aerotermia</div><div class="sc-value" id="d-aero">–</div><div class="sc-sub">×base por temperatura</div></div>
+    <div class="side-card" style="flex:unset"><div class="sc-label">Demanda hasta solar</div><div class="sc-value" id="d-dem">â€“</div><div class="sc-sub">kWh previstos</div></div>
+    <div class="side-card" style="flex:unset"><div class="sc-label">Solar 08hâ€“arranque</div><div class="sc-value" id="d-sol">â€“</div><div class="sc-sub">kWh esperados</div></div>
+    <div class="side-card" style="flex:unset"><div class="sc-label">Hora arranque solar</div><div class="sc-value" id="d-start">â€“</div><div class="sc-sub">media mensual</div></div>
+    <div class="side-card" style="flex:unset"><div class="sc-label">Factor aerotermia</div><div class="sc-value" id="d-aero">â€“</div><div class="sc-sub">Ã—base por temperatura</div></div>
   </div>
   <div class="alert alert-gold">
-    TARIFA NATURGY NOCHE · <strong>VALLE 0,0718 €</strong> (00–08h lun–vie + festivos y fines de semana todo el día) · <strong>LLANO 0,1072 €</strong> (08–10h y 14–18h y 22–24h lun–vie) · <strong>PUNTA 0,1802 €</strong> (10–14h y 18–22h lun–vie) · VERTIDO 0,0726 €/kWh
+    TARIFA NATURGY NOCHE Â· <strong>VALLE 0,0718 â‚¬</strong> (00â€“08h lunâ€“vie + festivos y fines de semana todo el dÃ­a) Â· <strong>LLANO 0,1072 â‚¬</strong> (08â€“10h y 14â€“18h y 22â€“24h lunâ€“vie) Â· <strong>PUNTA 0,1802 â‚¬</strong> (10â€“14h y 18â€“22h lunâ€“vie) Â· VERTIDO 0,0726 â‚¬/kWh
   </div>
 </div>
 
-<!-- ══ HISTORIAL ══ -->
+<!-- â•â• HISTORIAL â•â• -->
 <div id="hist" class="screen">
 
   <!-- Aprendizaje -->
   <div class="chart-panel acc-panel">
-    <div class="panel-title">Aprendizaje automático · precisión del motor</div>
+    <div class="panel-title">Aprendizaje automÃ¡tico Â· precisiÃ³n del motor</div>
     <div class="alert alert-cyan" style="margin-bottom:1rem;font-size:10px">
-      Cada vez que confirmas el resultado real (SOC al amanecer), el motor ajusta sus coeficientes. Con más datos, la recomendación mejora automáticamente.
+      Cada vez que confirmas el resultado real (SOC al amanecer), el motor ajusta sus coeficientes. Con mÃ¡s datos, la recomendaciÃ³n mejora automÃ¡ticamente.
     </div>
-    <div class="acc-row"><div class="acc-label">Precisión consumo</div><div class="acc-bar"><div class="acc-fill" id="acc-cons" style="width:0%"></div></div><div class="acc-pct" id="acc-cons-val">–</div></div>
-    <div class="acc-row"><div class="acc-label">Precisión solar</div><div class="acc-bar"><div class="acc-fill" id="acc-sol" style="width:0%"></div></div><div class="acc-pct" id="acc-sol-val">–</div></div>
-    <div class="acc-row"><div class="acc-label">SOC predicho vs real</div><div class="acc-bar"><div class="acc-fill" id="acc-soc" style="width:0%"></div></div><div class="acc-pct" id="acc-soc-val">–</div></div>
+    <div class="acc-row"><div class="acc-label">PrecisiÃ³n consumo</div><div class="acc-bar"><div class="acc-fill" id="acc-cons" style="width:0%"></div></div><div class="acc-pct" id="acc-cons-val">â€“</div></div>
+    <div class="acc-row"><div class="acc-label">PrecisiÃ³n solar</div><div class="acc-bar"><div class="acc-fill" id="acc-sol" style="width:0%"></div></div><div class="acc-pct" id="acc-sol-val">â€“</div></div>
+    <div class="acc-row"><div class="acc-label">SOC predicho vs real</div><div class="acc-bar"><div class="acc-fill" id="acc-soc" style="width:0%"></div></div><div class="acc-pct" id="acc-soc-val">â€“</div></div>
     <div style="font-family:'Courier New','Lucida Console',monospace;font-size:10px;color:var(--muted);margin-top:8px" id="acc-notice"></div>
   </div>
 
   <div class="chart-panel">
-    <div class="panel-title">Registros · confirma resultado al día siguiente</div>
+    <div class="panel-title">Registros Â· confirma resultado al dÃ­a siguiente</div>
     <div id="hist-header-row" class="hist-header" style="display:none">
-      <span>Fecha</span><span>Recomendación</span><span>kWh</span><span>SOC</span><span>¿Correcto?</span>
+      <span>Fecha</span><span>RecomendaciÃ³n</span><span>kWh</span><span>SOC</span><span>Â¿Correcto?</span>
     </div>
     <div id="hist-list"></div>
   </div>
@@ -621,15 +622,15 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
   </div>
 </div>
 
-<!-- ══ AHORRO ══ -->
+<!-- â•â• AHORRO â•â• -->
 <div id="ahorro" class="screen">
   <div class="savings-hero">
-    <div class="savings-num" id="sav-total">0,00 €</div>
+    <div class="savings-num" id="sav-total">0,00 â‚¬</div>
     <div class="savings-label">Ahorro acumulado estimado</div>
-    <div class="savings-sub" id="sav-sub">vs. comprar toda la energía en tarifa punta (0,180 €/kWh)</div>
+    <div class="savings-sub" id="sav-sub">vs. comprar toda la energÃ­a en tarifa punta (0,180 â‚¬/kWh)</div>
   </div>
   <div class="savings-grid">
-    <div class="sav-card"><div class="sav-lbl">Este mes</div><div class="sav-val" id="sav-mes">0,00 €</div><div class="sav-sub">ahorro estimado</div></div>
+    <div class="sav-card"><div class="sav-lbl">Este mes</div><div class="sav-val" id="sav-mes">0,00 â‚¬</div><div class="sav-sub">ahorro estimado</div></div>
     <div class="sav-card"><div class="sav-lbl">kWh optimizados</div><div class="sav-val" id="sav-kwh">0 kWh</div><div class="sav-sub">cargados en valle</div></div>
     <div class="sav-card"><div class="sav-lbl">Noches gestionadas</div><div class="sav-val" id="sav-noches">0</div><div class="sav-sub">recomendaciones</div></div>
   </div>
@@ -638,19 +639,19 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
     <div id="monthly-chart"></div>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem">
-    <div class="sav-card"><div class="sav-lbl">Coste real carga valle</div><div class="sav-val" id="sav-coste">0,00 €</div><div class="sav-sub">a 0,072 €/kWh</div></div>
-    <div class="sav-card"><div class="sav-lbl">Coste si hubiese sido punta</div><div class="sav-val" id="sav-coste-punta">0,00 €</div><div class="sav-sub">a 0,180 €/kWh</div></div>
+    <div class="sav-card"><div class="sav-lbl">Coste real carga valle</div><div class="sav-val" id="sav-coste">0,00 â‚¬</div><div class="sav-sub">a 0,072 â‚¬/kWh</div></div>
+    <div class="sav-card"><div class="sav-lbl">Coste si hubiese sido punta</div><div class="sav-val" id="sav-coste-punta">0,00 â‚¬</div><div class="sav-sub">a 0,180 â‚¬/kWh</div></div>
   </div>
 </div>
 
-<!-- ══ AJUSTES ══ -->
+<!-- â•â• AJUSTES â•â• -->
 <div id="cfg" class="screen">
   <div class="alert alert-green">
     SOC se introduce manualmente: mira la app Greenheiss cada tarde, ajusta el slider y pulsa Recalcular.
   </div>
 
   <div class="settings-block">
-    <div class="settings-head">Ubicación (Open-Meteo)</div>
+    <div class="settings-head">UbicaciÃ³n (Open-Meteo)</div>
     <div class="s-row">
       <div><div class="s-name">Latitud</div></div>
       <input type="number" class="s-input" id="c-lat" placeholder="40.4168" step="0.0001">
@@ -660,21 +661,21 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
       <input type="number" class="s-input" id="c-lon" placeholder="-3.7038" step="0.0001">
     </div>
     <div class="btn-row" style="margin-top:.75rem">
-      <button class="btn" onclick="detectLoc()">📍 Detectar ubicación</button>
+      <button class="btn" onclick="detectLoc()">ðŸ“ Detectar ubicaciÃ³n</button>
     </div>
   </div>
 
   <div class="settings-block">
-    <div class="settings-head">Sistema de baterías</div>
+    <div class="settings-head">Sistema de baterÃ­as</div>
     <div class="s-row">
-      <div><div class="s-name">Capacidad total útil</div><div class="s-desc">4 × 4,8 kWh</div></div>
+      <div><div class="s-name">Capacidad total Ãºtil</div><div class="s-desc">4 Ã— 4,8 kWh</div></div>
       <div style="display:flex;align-items:center;gap:6px">
         <input type="number" class="s-input" id="c-cap" value="19.2" step="0.1">
         <span style="font-family:'Courier New','Lucida Console',monospace;font-size:11px;color:var(--muted)">kWh</span>
       </div>
     </div>
     <div class="s-row">
-      <div><div class="s-name">SOC mínimo operativo</div></div>
+      <div><div class="s-name">SOC mÃ­nimo operativo</div></div>
       <div style="display:flex;align-items:center;gap:6px">
         <input type="number" class="s-input" id="c-socmin" value="20" step="1">
         <span style="font-family:'Courier New','Lucida Console',monospace;font-size:11px;color:var(--muted)">%</span>
@@ -688,14 +689,14 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
       </div>
     </div>
     <div class="s-row">
-      <div><div class="s-name">Reserva mínima</div></div>
+      <div><div class="s-name">Reserva mÃ­nima</div></div>
       <div style="display:flex;align-items:center;gap:6px">
         <input type="number" class="s-input" id="c-res" value="1.5" step="0.1">
         <span style="font-family:'Courier New','Lucida Console',monospace;font-size:11px;color:var(--muted)">kWh</span>
       </div>
     </div>
     <div class="s-row">
-      <div><div class="s-name">kWh coche eléctrico</div><div class="s-desc">consumo por recarga nocturna</div></div>
+      <div><div class="s-name">kWh coche elÃ©ctrico</div><div class="s-desc">consumo por recarga nocturna</div></div>
       <div style="display:flex;align-items:center;gap:6px">
         <input type="number" class="s-input" id="c-ev" value="10" step="0.5">
         <span style="font-family:'Courier New','Lucida Console',monospace;font-size:11px;color:var(--muted)">kWh</span>
@@ -706,7 +707,7 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
   <div class="settings-block">
     <div class="settings-head">Sensibilidad del motor</div>
     <div class="s-row">
-      <div><div class="s-name">Perfil de riesgo</div><div class="s-desc">conservador → carga más / agresivo → carga menos</div></div>
+      <div><div class="s-name">Perfil de riesgo</div><div class="s-desc">conservador â†’ carga mÃ¡s / agresivo â†’ carga menos</div></div>
       <select class="s-input" id="c-sens" style="text-align:left">
         <option value="0.8">Agresivo</option>
         <option value="1.0" selected>Normal</option>
@@ -718,11 +719,11 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
   <div class="settings-block">
     <div class="settings-head">Notificaciones Telegram</div>
     <div class="tg-info">
-      <strong>Cómo activarlo:</strong><br>
-      1. Habla con <strong>@BotFather</strong> en Telegram → /newbot → copia el token<br>
+      <strong>CÃ³mo activarlo:</strong><br>
+      1. Habla con <strong>@BotFather</strong> en Telegram â†’ /newbot â†’ copia el token<br>
       2. Escribe cualquier mensaje a tu nuevo bot<br>
-      3. Abre en el navegador: <strong>https://api.telegram.org/bot[TOKEN]/getUpdates</strong> → copia tu chat_id<br>
-      La app enviará la recomendación cuando pulses Recalcular o el botón 📨 Enviar.
+      3. Abre en el navegador: <strong>https://api.telegram.org/bot[TOKEN]/getUpdates</strong> â†’ copia tu chat_id<br>
+      La app enviarÃ¡ la recomendaciÃ³n cuando pulses Recalcular o el botÃ³n ðŸ“¨ Enviar.
     </div>
     <div class="s-row">
       <div><div class="s-name">Token del bot</div><div class="s-desc">de @BotFather</div></div>
@@ -733,22 +734,22 @@ input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(9
     </div>
     <input type="text" class="s-input s-input-full" id="c-tg-chat" placeholder="987654321">
     <div class="btn-row" style="margin-top:.75rem">
-      <button class="btn btn-cyan" onclick="testTelegram()">📨 Probar envío</button>
+      <button class="btn btn-cyan" onclick="testTelegram()">ðŸ“¨ Probar envÃ­o</button>
       <span id="tg-status" style="font-family:'Courier New','Lucida Console',monospace;font-size:11px;align-self:center"></span>
     </div>
   </div>
 
   <div class="btn-row">
-    <button class="btn btn-gold" onclick="saveAll()">Guardar configuración</button>
+    <button class="btn btn-gold" onclick="saveAll()">Guardar configuraciÃ³n</button>
     <span id="save-ok" style="font-family:'Courier New','Lucida Console',monospace;font-size:11px;color:var(--green);align-self:center"></span>
   </div>
 </div>
 </main>
 
 <script>
-// ══════════════════════════════════════════════════════
-// DATOS CALIBRADOS (10 meses histórico real Las Peñas)
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// DATOS CALIBRADOS (10 meses histÃ³rico real Las PeÃ±as)
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 const H = {
   cons: {1:11.1,2:8.2,3:5.9,4:3.0,5:3.5,6:4.3,7:4.1,8:3.8,9:3.7,10:3.0,11:6.5,12:8.6},
   sol:  {1:1.6, 2:2.6, 3:5.6, 4:5.2, 5:6.0, 6:9.3, 7:9.0, 8:6.5, 9:4.6, 10:2.9, 11:3.3, 12:1.7},
@@ -757,12 +758,12 @@ const H = {
   cloudF: c => Math.max(0.05, 1 - c*0.009)
 };
 
-// Factores de corrección aprendidos (se actualizan con historial)
+// Factores de correcciÃ³n aprendidos (se actualizan con historial)
 let LEARNED = JSON.parse(localStorage.getItem('clp3_learned') || '{"consFactor":1.0,"solFactor":1.0,"samples":0}');
 
 const TARIFA = { valle:0.0718, llano:0.1072, punta:0.1802 };
 
-// Festivos nacionales España 2025-2026 (YYYY-MM-DD)
+// Festivos nacionales EspaÃ±a 2025-2026 (YYYY-MM-DD)
 const FESTIVOS = new Set([
   '2025-01-01','2025-01-06','2025-04-18','2025-05-01','2025-08-15',
   '2025-10-12','2025-11-01','2025-12-06','2025-12-08','2025-12-25',
@@ -776,9 +777,9 @@ function isFreeDay(date) {
   return dow === 0 || dow === 6 || FESTIVOS.has(key);
 }
 
-// Tarifa por hora según tipo de día
+// Tarifa por hora segÃºn tipo de dÃ­a
 function getTarifa(date, hour) {
-  if (isFreeDay(date)) return 'valle'; // festivo/finde → todo valle
+  if (isFreeDay(date)) return 'valle'; // festivo/finde â†’ todo valle
   // laborable
   if (hour < 8 || hour >= 22) return 'valle';
   if ((hour >= 10 && hour < 14) || (hour >= 18 && hour < 22)) return 'punta';
@@ -789,14 +790,14 @@ function getPrecio(date, hour) {
   return TARIFA[getTarifa(date, hour)];
 }
 
-// Ventana óptima de carga: horas de valle más baratas donde cargar
+// Ventana Ã³ptima de carga: horas de valle mÃ¡s baratas donde cargar
 function getOptimalWindow(kWh, cfg, forDate) {
   if (kWh <= 0) return null;
   const horasNecesarias = Math.ceil(kWh / cfg.kw);
-  // Candidatos: horas valle de la noche siguiente (20h–08h)
+  // Candidatos: horas valle de la noche siguiente (20hâ€“08h)
   const candidatas = [];
   const d = forDate || new Date();
-  for (let h = 20; h < 32; h++) { // 20h hoy a 08h mañana
+  for (let h = 20; h < 32; h++) { // 20h hoy a 08h maÃ±ana
     const hReal = h % 24;
     const fecha = new Date(d);
     if (h >= 24) fecha.setDate(fecha.getDate() + 1);
@@ -811,14 +812,14 @@ function getOptimalWindow(kWh, cfg, forDate) {
   const ini = elegidas[0], fin = (elegidas[elegidas.length-1] + 1) % 24;
   return {
     horas: elegidas,
-    label: `${ini.toString().padStart(2,'0')}:00–${fin.toString().padStart(2,'0')}:00`,
+    label: `${ini.toString().padStart(2,'0')}:00â€“${fin.toString().padStart(2,'0')}:00`,
     precioMedio: elegidas.reduce((s,h) => s + getPrecio(forDate||new Date(),h), 0) / elegidas.length
   };
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // CONFIG
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function getCfg() {
   const d = {lat:40.4168,lon:-3.7038,cap:19.2,socMin:20,kw:2.0,res:1.5,evKwh:10,sens:1.0,tgToken:'',tgChat:''};
   try { Object.assign(d, JSON.parse(localStorage.getItem('clp3_cfg')||'{}')); } catch(e) {}
@@ -852,13 +853,13 @@ function saveAll() {
   };
   localStorage.setItem('clp3_cfg', JSON.stringify(d));
   const el = document.getElementById('save-ok');
-  el.textContent = '✓ guardado';
+  el.textContent = 'âœ“ guardado';
   setTimeout(() => el.textContent = '', 2500);
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // SOC + EV
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 let evActive = JSON.parse(localStorage.getItem('clp3_ev')||'false');
 
 function onSoc(v) {
@@ -887,9 +888,9 @@ function renderEV() {
   sw.classList.toggle('on', evActive);
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // TARIFA CHART
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function renderTarifaChart(optimalHours) {
   const bars = document.getElementById('tarifa-bars');
   const lbls = document.getElementById('tarifa-hlbls');
@@ -900,10 +901,10 @@ function renderTarifaChart(optimalHours) {
   const tmr = new Date(now); tmr.setDate(tmr.getDate()+1);
   const libre = isFreeDay(tmr);
   info.textContent = libre
-    ? '▸ MAÑANA: festivo / fin de semana → TODA LA NOCHE tarifa VALLE'
-    : '▸ MAÑANA: día laborable → tramos punta/llano/valle activos';
+    ? 'â–¸ MAÃ‘ANA: festivo / fin de semana â†’ TODA LA NOCHE tarifa VALLE'
+    : 'â–¸ MAÃ‘ANA: dÃ­a laborable â†’ tramos punta/llano/valle activos';
 
-  // Mostrar horas 18h–12h siguiente día (18 horas de contexto)
+  // Mostrar horas 18hâ€“12h siguiente dÃ­a (18 horas de contexto)
   const hours = [18,19,20,21,22,23,0,1,2,3,4,5,6,7,8,9,10,11,12];
   const maxH = 100;
   hours.forEach(h => {
@@ -914,8 +915,8 @@ function renderTarifaChart(optimalHours) {
     const bar = document.createElement('div');
     bar.className = 'tarifa-bar ' + (isOptimal ? 'optimal' : (libre && h < 8 ? 'valle' : tipo));
     bar.style.height = alt+'%';
-    if (isOptimal) bar.title = `${h}:00 ← CARGAR AQUÍ (${tipo})`;
-    else bar.title = `${h}:00 · ${tipo} · ${TARIFA[tipo]||0.072}€/kWh`;
+    if (isOptimal) bar.title = `${h}:00 â† CARGAR AQUÃ (${tipo})`;
+    else bar.title = `${h}:00 Â· ${tipo} Â· ${TARIFA[tipo]||0.072}â‚¬/kWh`;
     bars.appendChild(bar);
 
     const l = document.createElement('div');
@@ -925,9 +926,9 @@ function renderTarifaChart(optimalHours) {
   });
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // WEATHER
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 async function fetchWx(lat, lon) {
   try {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
@@ -953,14 +954,14 @@ async function fetchWx(lat, lon) {
   } catch(e) { return null; }
 }
 
-// ══════════════════════════════════════════════════════
-// MOTOR DE CÁLCULO
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// MOTOR DE CÃLCULO
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function calcRec(soc, wx, cfg, withEV) {
   const now = new Date();
   const tmr = new Date(now); tmr.setDate(tmr.getDate() + 1);
-  const tmrFree = isFreeDay(tmr);   // ← ¿mañana es finde/festivo? Toda la tarifa es valle
-  const todayFree = isFreeDay(now); // ← ¿hoy también es libre?
+  const tmrFree = isFreeDay(tmr);   // â† Â¿maÃ±ana es finde/festivo? Toda la tarifa es valle
+  const todayFree = isFreeDay(now); // â† Â¿hoy tambiÃ©n es libre?
 
   const m = now.getMonth() + 2 > 12 ? 1 : now.getMonth() + 2;
   const tf = wx ? H.tempF(wx.tempMin) : 1.0;
@@ -985,50 +986,50 @@ function calcRec(soc, wx, cfg, withEV) {
   let conf  = wx ? (wx.rainProb > 40 || wx.cloudMorn > 60 ? 'MEDIA' : 'ALTA') : 'BAJA';
   let level = kWh === 0 ? 0 : kWh <= 3 ? 1 : kWh <= 6 ? 2 : kWh <= 9 ? 3 : 4;
 
-  // Títulos y lógica especial para días libres
+  // TÃ­tulos y lÃ³gica especial para dÃ­as libres
   let title, reasons = [];
 
   if (kWh === 0) {
     title = 'No es necesario cargar';
   } else if (tmrFree) {
-    // Mañana todo el día es valle — no hay urgencia de cargar de madrugada
-    title = 'Cargar mañana · tarifa valle todo el día';
-    reasons.push('📅 mañana es ' + (tmr.getDay()===0?'domingo':tmr.getDay()===6?'sábado':'festivo') + ' → tarifa valle las 24h');
-    reasons.push('puedes cargar en cualquier momento del día, no solo de madrugada');
+    // MaÃ±ana todo el dÃ­a es valle â€” no hay urgencia de cargar de madrugada
+    title = 'Cargar maÃ±ana Â· tarifa valle todo el dÃ­a';
+    reasons.push('ðŸ“… maÃ±ana es ' + (tmr.getDay()===0?'domingo':tmr.getDay()===6?'sÃ¡bado':'festivo') + ' â†’ tarifa valle las 24h');
+    reasons.push('puedes cargar en cualquier momento del dÃ­a, no solo de madrugada');
   } else if (todayFree) {
     title = ['No cargar','Carga ligera esta tarde','Carga media esta tarde','Carga alta esta tarde','Carga completa esta tarde'][level];
-    reasons.push('📅 hoy es día libre → tarifa valle todo el día, carga cuando quieras');
+    reasons.push('ðŸ“… hoy es dÃ­a libre â†’ tarifa valle todo el dÃ­a, carga cuando quieras');
   } else {
     title = ['No cargar esta noche','Carga ligera esta noche','Carga media esta noche','Carga alta esta noche','Carga completa esta noche'][level];
   }
 
   if (wx) {
-    if (wx.tempMin < 5)       reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia toda la noche`);
-    else if (wx.tempMin < 12) reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia activa`);
-    else                      reasons.push(`mín ${wx.tempMin.toFixed(1)}°C → aerotermia mínima`);
-    if (wx.cloudMorn > 60) reasons.push(`nubosidad ${Math.round(wx.cloudMorn)}% mañana`);
-    else                   reasons.push(`cielo despejado → buena solar`);
+    if (wx.tempMin < 5)       reasons.push(`mÃ­n ${wx.tempMin.toFixed(1)}Â°C â†’ aerotermia toda la noche`);
+    else if (wx.tempMin < 12) reasons.push(`mÃ­n ${wx.tempMin.toFixed(1)}Â°C â†’ aerotermia activa`);
+    else                      reasons.push(`mÃ­n ${wx.tempMin.toFixed(1)}Â°C â†’ aerotermia mÃ­nima`);
+    if (wx.cloudMorn > 60) reasons.push(`nubosidad ${Math.round(wx.cloudMorn)}% maÃ±ana`);
+    else                   reasons.push(`cielo despejado â†’ buena solar`);
   }
   if (withEV)  reasons.push('coche en carga esta noche (+' + cfg.evKwh + ' kWh)');
   if (soc < 30) reasons.push(`SOC bajo (${soc}%)`);
-  else if (soc > 75) reasons.push(`baterías bien cargadas (${soc}%)`);
+  else if (soc > 75) reasons.push(`baterÃ­as bien cargadas (${soc}%)`);
 
-  // Ventana óptima — si mañana es libre, ampliar a todo el día
+  // Ventana Ã³ptima â€” si maÃ±ana es libre, ampliar a todo el dÃ­a
   let window;
   if (tmrFree && kWh > 0) {
     const horasNec = Math.ceil(kWh / cfg.kw);
-    window = { horas: [], label: 'cualquier hora mañana · 0,072€', precioMedio: TARIFA.valle };
+    window = { horas: [], label: 'cualquier hora maÃ±ana Â· 0,072â‚¬', precioMedio: TARIFA.valle };
   } else {
     window = getOptimalWindow(kWh, cfg);
   }
 
-  return { kWh, horas, socObj, conf, level, title, reason: reasons.join(' · '),
+  return { kWh, horas, socObj, conf, level, title, reason: reasons.join(' Â· '),
            dem, demBase, evExtra, sol, batUtil, saving, costeCarga, startH, tf, cf, m, window, tmrFree, todayFree };
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // UI
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 let lastRec = null;
 
 function updateUI(rec, soc, wx) {
@@ -1042,7 +1043,7 @@ function updateUI(rec, soc, wx) {
   else rv.innerHTML = rec.kWh.toFixed(1) + '<span class="rec-unit"> kWh</span>';
 
   document.getElementById('rec-sub').textContent = rec.title;
-  document.getElementById('rec-detail').textContent = rec.reason || '–';
+  document.getElementById('rec-detail').textContent = rec.reason || 'â€“';
 
   // Confianza
   const on = rec.conf === 'ALTA' ? 3 : rec.conf === 'MEDIA' ? 2 : 1;
@@ -1052,13 +1053,13 @@ function updateUI(rec, soc, wx) {
   // Side cards
   if (rec.window) {
     document.getElementById('sc-ventana').textContent = rec.window.label;
-    document.getElementById('sc-ventana-sub').textContent = (rec.window.precioMedio*1000).toFixed(0)/1000 > 0.08 ? 'tarifa llano' : 'tarifa valle ✓';
+    document.getElementById('sc-ventana-sub').textContent = (rec.window.precioMedio*1000).toFixed(0)/1000 > 0.08 ? 'tarifa llano' : 'tarifa valle âœ“';
   } else {
     document.getElementById('sc-ventana').textContent = 'No necesaria';
-    document.getElementById('sc-ventana-sub').textContent = 'baterías suficientes';
+    document.getElementById('sc-ventana-sub').textContent = 'baterÃ­as suficientes';
   }
   document.getElementById('sc-soc-obj').textContent = rec.socObj + '%';
-  document.getElementById('sc-ahorro').textContent = rec.kWh > 0 ? rec.saving.toFixed(2)+'€' : '0,00€';
+  document.getElementById('sc-ahorro').textContent = rec.kWh > 0 ? rec.saving.toFixed(2)+'â‚¬' : '0,00â‚¬';
 
   // SOC viz
   document.getElementById('soc-fill').style.width = soc + '%';
@@ -1067,11 +1068,11 @@ function updateUI(rec, soc, wx) {
 
   // Weather
   if (wx) {
-    const icons = {0:'☀',1:'🌤',2:'⛅',3:'☁',45:'🌫',48:'🌫',61:'🌧',80:'🌦'};
+    const icons = {0:'â˜€',1:'ðŸŒ¤',2:'â›…',3:'â˜',45:'ðŸŒ«',48:'ðŸŒ«',61:'ðŸŒ§',80:'ðŸŒ¦'};
     const sky = {0:'Despejado',1:'Casi despejado',2:'Parcialmente nublado',3:'Cubierto',61:'Lluvia',80:'Chubascos'};
-    document.getElementById('wx-ico').textContent = icons[wx.wcode] || '⛅';
+    document.getElementById('wx-ico').textContent = icons[wx.wcode] || 'â›…';
     document.getElementById('wx-sky').textContent = sky[wx.wcode] || 'Variable';
-    document.getElementById('wx-temp').textContent = wx.tempMin.toFixed(1) + '°C';
+    document.getElementById('wx-temp').textContent = wx.tempMin.toFixed(1) + 'Â°C';
     document.getElementById('wx-rain').textContent = wx.rainProb + '%';
   }
   document.getElementById('wx-start').textContent = rec.startH.toFixed(0) + ':00h';
@@ -1079,25 +1080,25 @@ function updateUI(rec, soc, wx) {
   // Tarifa chart
   renderTarifaChart(rec.window ? rec.window.horas : null);
 
-  // Fórmula
+  // FÃ³rmula
   document.getElementById('f-cons').textContent = '+ ' + rec.demBase.toFixed(2) + ' kWh';
-  document.getElementById('f-ev').textContent = evActive ? '+ ' + rec.evExtra.toFixed(1) + ' kWh 🚗' : '+ 0 kWh';
-  document.getElementById('f-sol').textContent = '− ' + rec.sol.toFixed(2) + ' kWh';
-  document.getElementById('f-bat').textContent = '− ' + rec.batUtil.toFixed(2) + ' kWh';
+  document.getElementById('f-ev').textContent = evActive ? '+ ' + rec.evExtra.toFixed(1) + ' kWh ðŸš—' : '+ 0 kWh';
+  document.getElementById('f-sol').textContent = 'âˆ’ ' + rec.sol.toFixed(2) + ' kWh';
+  document.getElementById('f-bat').textContent = 'âˆ’ ' + rec.batUtil.toFixed(2) + ' kWh';
   document.getElementById('f-rec').textContent = rec.kWh.toFixed(1) + ' kWh';
 
   // Detalle
   document.getElementById('d-dem').textContent = rec.dem.toFixed(1);
   document.getElementById('d-sol').textContent = rec.sol.toFixed(1);
   document.getElementById('d-start').textContent = rec.startH.toFixed(0) + ':00h';
-  document.getElementById('d-aero').textContent = '×' + rec.tf.toFixed(2);
+  document.getElementById('d-aero').textContent = 'Ã—' + rec.tf.toFixed(2);
 
   // Status header
   const now = new Date();
-  document.getElementById('status-text').textContent = 'SOC ' + soc + '% · ' +
+  document.getElementById('status-text').textContent = 'SOC ' + soc + '% Â· ' +
     now.toLocaleTimeString('es-ES', {hour:'2-digit', minute:'2-digit'});
 
-  // Botón siempre visible
+  // BotÃ³n siempre visible
 
   // Hourly chart
   buildChart(wx, rec.m, rec.cf);
@@ -1136,16 +1137,16 @@ function buildChart(wx, m, cf) {
   });
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // MAIN CALC
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 async function calcular() {
   document.getElementById('loading').classList.remove('hidden');
   const msgs = [
-    'Comprobando tarifa para mañana',
-    'Leyendo previsión meteorológica',
+    'Comprobando tarifa para maÃ±ana',
+    'Leyendo previsiÃ³n meteorolÃ³gica',
     'Aplicando factor aerotermia',
-    'Calculando ventana óptima de carga'
+    'Calculando ventana Ã³ptima de carga'
   ];
   let mi = 0;
   const iv = setInterval(() => {
@@ -1162,9 +1163,9 @@ async function calcular() {
   document.getElementById('loading').classList.add('hidden');
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // HISTORIAL + APRENDIZAJE
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function getHist() { return JSON.parse(localStorage.getItem('clp3_hist') || '[]'); }
 function saveHist(h) { localStorage.setItem('clp3_hist', JSON.stringify(h)); }
 
@@ -1184,7 +1185,7 @@ function guardarEnHistorial() {
     demPrev: rec.dem,
     solPrev: rec.sol,
     evActive,
-    socReal: null,   // se rellena al día siguiente
+    socReal: null,   // se rellena al dÃ­a siguiente
     ok: null         // feedback del usuario
   };
   const hist = getHist();
@@ -1194,8 +1195,8 @@ function guardarEnHistorial() {
   renderHist();
   renderSavings();
   const btn = document.getElementById('btn-save-hist');
-  btn.textContent = '✓ Guardado';
-  setTimeout(() => { btn.textContent = '💾 Guardar en historial'; }, 2000);
+  btn.textContent = 'âœ“ Guardado';
+  setTimeout(() => { btn.textContent = 'ðŸ’¾ Guardar en historial'; }, 2000);
 }
 
 function setFeedback(id, ok) {
@@ -1204,7 +1205,7 @@ function setFeedback(id, ok) {
   if (idx < 0) return;
   hist[idx].ok = ok;
   // Pedir SOC real
-  const socR = prompt(`Registrar resultado · ¿Cuál fue el SOC real al amanecer de esa noche? (0-100, o cancela para omitir)`);
+  const socR = prompt(`Registrar resultado Â· Â¿CuÃ¡l fue el SOC real al amanecer de esa noche? (0-100, o cancela para omitir)`);
   if (socR !== null && !isNaN(parseInt(socR))) {
     hist[idx].socReal = parseInt(socR);
     applyLearning(hist);
@@ -1217,15 +1218,15 @@ function setFeedback(id, ok) {
 function applyLearning(hist) {
   // Solo usar entradas con feedback completo
   const valid = hist.filter(h => h.ok !== null && h.socReal !== null && h.kWh > 0);
-  if (valid.length < 3) return; // mínimo 3 muestras
+  if (valid.length < 3) return; // mÃ­nimo 3 muestras
 
-  // Calcular error medio en consumo: si recarga necesaria fue mayor de lo esperado → consFactor > 1
+  // Calcular error medio en consumo: si recarga necesaria fue mayor de lo esperado â†’ consFactor > 1
   let consErrors = [], solErrors = [];
   valid.forEach(e => {
     // El SOC real al amanecer fue mayor = sobramos, factor consumo debe bajar
-    // El SOC real al amanecer fue menor = faltó energía, factor consumo debe subir
-    const socDiff = e.socObj - e.socReal; // + = sobró, - = faltó
-    const kWhDiff = socDiff / 100 * 19.2; // conversión a kWh
+    // El SOC real al amanecer fue menor = faltÃ³ energÃ­a, factor consumo debe subir
+    const socDiff = e.socObj - e.socReal; // + = sobrÃ³, - = faltÃ³
+    const kWhDiff = socDiff / 100 * 19.2; // conversiÃ³n a kWh
     consErrors.push(1 + kWhDiff / Math.max(e.demPrev, 1) * 0.3);
   });
 
@@ -1243,14 +1244,14 @@ function renderAccuracy() {
   const notice = document.getElementById('acc-notice');
   if (n < 2) {
     ['acc-cons','acc-sol','acc-soc'].forEach(id => { document.getElementById(id).style.width = '0%'; });
-    ['acc-cons-val','acc-sol-val','acc-soc-val'].forEach(id => { document.getElementById(id).textContent = '–'; });
-    notice.textContent = n === 0 ? 'Sin datos todavía. Confirma resultados en el historial.' : `${n} muestra. Necesitas al menos 3 para calibrar.`;
+    ['acc-cons-val','acc-sol-val','acc-soc-val'].forEach(id => { document.getElementById(id).textContent = 'â€“'; });
+    notice.textContent = n === 0 ? 'Sin datos todavÃ­a. Confirma resultados en el historial.' : `${n} muestra. Necesitas al menos 3 para calibrar.`;
     return;
   }
-  // Precisión SOC: cuánto se acercó socObj a socReal
+  // PrecisiÃ³n SOC: cuÃ¡nto se acercÃ³ socObj a socReal
   const socErrs = valid.map(e => 1 - Math.abs(e.socObj - e.socReal) / 100);
   const socAcc = Math.round(socErrs.reduce((a,b)=>a+b,0)/n * 100);
-  // Precisión general basada en feedback ok/bad
+  // PrecisiÃ³n general basada en feedback ok/bad
   const okCount = valid.filter(e => e.ok).length;
   const genAcc = Math.round(okCount / n * 100);
   document.getElementById('acc-cons').style.width = genAcc + '%';
@@ -1259,7 +1260,7 @@ function renderAccuracy() {
   document.getElementById('acc-sol-val').textContent = (genAcc - 3) + '%';
   document.getElementById('acc-soc').style.width = socAcc + '%';
   document.getElementById('acc-soc-val').textContent = socAcc + '%';
-  notice.textContent = `${n} muestras · factor consumo ajustado ×${LEARNED.consFactor.toFixed(2)}`;
+  notice.textContent = `${n} muestras Â· factor consumo ajustado Ã—${LEARNED.consFactor.toFixed(2)}`;
 }
 
 function renderHist() {
@@ -1268,20 +1269,20 @@ function renderHist() {
   const header = document.getElementById('hist-header-row');
   if (!hist.length) {
     header.style.display = 'none';
-    c.innerHTML = '<div style="font-family:\'Share Tech Mono\',monospace;font-size:11px;color:var(--muted);padding:1rem 0">Sin historial. Calcula una recomendación y pulsa Guardar.</div>';
+    c.innerHTML = '<div style="font-family:\'Share Tech Mono\',monospace;font-size:11px;color:var(--muted);padding:1rem 0">Sin historial. Calcula una recomendaciÃ³n y pulsa Guardar.</div>';
     return;
   }
   header.style.display = 'grid';
   c.innerHTML = hist.map(h => `
     <div class="hist-row">
       <div class="h-date">${h.date}<br>${h.time}</div>
-      <div class="h-rec">${h.title}${h.evActive?'&nbsp;🚗':''}</div>
+      <div class="h-rec">${h.title}${h.evActive?'&nbsp;ðŸš—':''}</div>
       <div class="h-kwh">${h.kWh > 0 ? h.kWh.toFixed(1)+' kWh' : 'NO'}</div>
-      <div class="h-soc">${h.soc}% → ${h.socObj}%${h.socReal !== null ? '<br><span style="color:var(--green)">real: '+h.socReal+'%</span>' : ''}</div>
+      <div class="h-soc">${h.soc}% â†’ ${h.socObj}%${h.socReal !== null ? '<br><span style="color:var(--green)">real: '+h.socReal+'%</span>' : ''}</div>
       <div class="h-fb">
         ${h.ok === null
-          ? `<button class="fb-btn" onclick="setFeedback(${h.id},true)">✓</button><button class="fb-btn" onclick="setFeedback(${h.id},false)">✗</button>`
-          : `<span class="fb-btn ${h.ok?'ok':'bad'}">${h.ok?'✓ OK':'✗ Falló'}</span>`
+          ? `<button class="fb-btn" onclick="setFeedback(${h.id},true)">âœ“</button><button class="fb-btn" onclick="setFeedback(${h.id},false)">âœ—</button>`
+          : `<span class="fb-btn ${h.ok?'ok':'bad'}">${h.ok?'âœ“ OK':'âœ— FallÃ³'}</span>`
         }
       </div>
     </div>
@@ -1290,7 +1291,7 @@ function renderHist() {
 }
 
 function clearHist() {
-  if (confirm('¿Borrar historial? También se resetean los factores aprendidos.')) {
+  if (confirm('Â¿Borrar historial? TambiÃ©n se resetean los factores aprendidos.')) {
     localStorage.removeItem('clp3_hist');
     LEARNED = {consFactor:1.0, solFactor:1.0, samples:0};
     localStorage.removeItem('clp3_learned');
@@ -1300,7 +1301,7 @@ function clearHist() {
 }
 function exportHist() {
   const hist = getHist();
-  const csv = 'Fecha,Hora,Recomendación,kWh,SOC_ini,SOC_obj,SOC_real,EV,OK\n' +
+  const csv = 'Fecha,Hora,RecomendaciÃ³n,kWh,SOC_ini,SOC_obj,SOC_real,EV,OK\n' +
     hist.map(h => `${h.date},${h.time},"${h.title}",${h.kWh},${h.soc},${h.socObj},${h.socReal||''},${h.evActive?'SI':'NO'},${h.ok===null?'pendiente':h.ok?'SI':'NO'}`).join('\n');
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
@@ -1308,9 +1309,9 @@ function exportHist() {
   a.click();
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // AHORRO
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function renderSavings() {
   const hist = getHist();
   const now = new Date();
@@ -1338,12 +1339,12 @@ function renderSavings() {
     if (h.month === mesActual) mesSaving += saving;
   });
 
-  document.getElementById('sav-total').textContent = totalSaving.toFixed(2) + ' €';
-  document.getElementById('sav-mes').textContent = mesSaving.toFixed(2) + ' €';
+  document.getElementById('sav-total').textContent = totalSaving.toFixed(2) + ' â‚¬';
+  document.getElementById('sav-mes').textContent = mesSaving.toFixed(2) + ' â‚¬';
   document.getElementById('sav-kwh').textContent = totalKwh.toFixed(1) + ' kWh';
   document.getElementById('sav-noches').textContent = totalNoches;
-  document.getElementById('sav-coste').textContent = totalCoste.toFixed(2) + ' €';
-  document.getElementById('sav-coste-punta').textContent = (totalKwh * TARIFA.punta).toFixed(2) + ' €';
+  document.getElementById('sav-coste').textContent = totalCoste.toFixed(2) + ' â‚¬';
+  document.getElementById('sav-coste-punta').textContent = (totalKwh * TARIFA.punta).toFixed(2) + ' â‚¬';
 
   // Chart mensual
   const chart = document.getElementById('monthly-chart');
@@ -1360,14 +1361,14 @@ function renderSavings() {
     return `<div class="month-bar-row">
       <div class="month-lbl">${lbl}</div>
       <div class="month-bar-bg"><div class="month-bar-fill" style="width:${pct}%"></div></div>
-      <div class="month-val">${v.toFixed(2)}€</div>
+      <div class="month-val">${v.toFixed(2)}â‚¬</div>
     </div>`;
   }).join('');
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // TELEGRAM
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 async function sendTgMessage(msg, cfg) {
   if (!cfg.tgToken || !cfg.tgChat) return false;
   try {
@@ -1383,7 +1384,7 @@ async function sendTgMessage(msg, cfg) {
 }
 
 async function enviarTelegram() {
-  if (!lastRec) { alert('Primero calcula una recomendación'); return; }
+  if (!lastRec) { alert('Primero calcula una recomendaciÃ³n'); return; }
   const cfg = getCfg();
   if (!cfg.tgToken || !cfg.tgChat) {
     alert('Configura el token y chat ID de Telegram en Ajustes');
@@ -1393,25 +1394,25 @@ async function enviarTelegram() {
   const now = new Date();
   const tmr = new Date(now); tmr.setDate(tmr.getDate()+1);
   const libre = isFreeDay(tmr);
-  const tarifaTipo = libre ? '📗 VALLE todo el día (festivo/finde)' : '📊 Tarifa diferenciada';
+  const tarifaTipo = libre ? 'ðŸ“— VALLE todo el dÃ­a (festivo/finde)' : 'ðŸ“Š Tarifa diferenciada';
 
-  const msg = `⚡ <b>SIGED · Gestión de baterías</b>
+  const msg = `âš¡ <b>SIGED Â· GestiÃ³n de baterÃ­as</b>
 ${now.toLocaleDateString('es-ES', {weekday:'long', day:'numeric', month:'long'})}
 
 <b>${rec.title.toUpperCase()}</b>
-${rec.kWh > 0 ? `🔋 Cargar <b>${rec.kWh.toFixed(1)} kWh</b>` : '✅ No es necesario cargar'}
-${rec.window ? `⏰ Ventana óptima: <b>${rec.window.label}</b>` : ''}
+${rec.kWh > 0 ? `ðŸ”‹ Cargar <b>${rec.kWh.toFixed(1)} kWh</b>` : 'âœ… No es necesario cargar'}
+${rec.window ? `â° Ventana Ã³ptima: <b>${rec.window.label}</b>` : ''}
 
-📊 SOC actual: ${soc}%  →  Objetivo amanecer: ${rec.socObj}%
-💰 Ahorro estimado: ${rec.saving.toFixed(2)} €
+ðŸ“Š SOC actual: ${soc}%  â†’  Objetivo amanecer: ${rec.socObj}%
+ðŸ’° Ahorro estimado: ${rec.saving.toFixed(2)} â‚¬
 
-🌤 Mañana: ${wx ? `${wx.tempMin.toFixed(1)}°C mín · ${wx.rainProb}% lluvia` : 'sin datos meteo'}
+ðŸŒ¤ MaÃ±ana: ${wx ? `${wx.tempMin.toFixed(1)}Â°C mÃ­n Â· ${wx.rainProb}% lluvia` : 'sin datos meteo'}
 ${tarifaTipo}
 
 <i>${rec.reason}</i>`;
 
   const ok = await sendTgMessage(msg, cfg);
-  if (ok) alert('✓ Enviado correctamente a Telegram');
+  if (ok) alert('âœ“ Enviado correctamente a Telegram');
   else alert('Error al enviar. Verifica el token y chat ID en Ajustes.');
 }
 
@@ -1421,14 +1422,14 @@ async function testTelegram() {
   const status = document.getElementById('tg-status');
   status.style.color = 'var(--muted)';
   status.textContent = 'Enviando...';
-  const ok = await sendTgMessage('✅ <b>SIGED</b> · Test de conexión correcto. Telegram configurado.', cfg);
+  const ok = await sendTgMessage('âœ… <b>SIGED</b> Â· Test de conexiÃ³n correcto. Telegram configurado.', cfg);
   status.style.color = ok ? 'var(--green)' : 'var(--red)';
-  status.textContent = ok ? '✓ Enviado correctamente' : '✗ Error – verifica token y chat ID';
+  status.textContent = ok ? 'âœ“ Enviado correctamente' : 'âœ— Error â€“ verifica token y chat ID';
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // UTILS
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function showTab(id, btn) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -1449,16 +1450,16 @@ function applyTheme(t) {
   document.documentElement.setAttribute('data-theme', t);
   localStorage.setItem('clp3_theme', t);
   const b = document.getElementById('theme-btn');
-  if (b) b.textContent = (t === 'light') ? '🌙' : '☀️';
+  if (b) b.textContent = (t === 'light') ? 'ðŸŒ™' : 'â˜€ï¸';
 }
 function toggleTheme() {
   const cur = document.documentElement.getAttribute('data-theme');
   applyTheme(cur === 'light' ? 'dark' : 'light');
 }
 
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // INIT
-// ══════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 window.addEventListener('load', () => {
   applyTheme(localStorage.getItem('clp3_theme') || 'dark');
   loadCfg();
